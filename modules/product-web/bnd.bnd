@@ -1,0 +1,8 @@
+Bundle-Name: product-web
+Bundle-SymbolicName: com.shopping.product.web
+Bundle-Version: 1.0.0
+Export-Package: com.shopping.product.web.constants
+
+Import-Package: \
+    !javax.servlet.*,\
+    *

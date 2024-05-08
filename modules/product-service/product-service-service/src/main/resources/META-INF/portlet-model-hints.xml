@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.onlineshopping.product.service.model.Brand">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="brandName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.CartList">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.CartListProduct">
+		<field name="id" type="long" />
+		<field name="cartListId" type="long" />
+		<field name="productId" type="long" />
+		<field name="size" type="String" />
+		<field name="quantity" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.Highlights">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="features" type="String" />
+		<field name="size" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.Image">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="view" type="String" />
+		<field name="imageUrl" type="String" />
+		<field name="productId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.Product">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="productName" type="String" />
+		<field name="productInfo" type="String" />
+		<field name="color" type="String" />
+		<field name="ratingCount" type="long" />
+		<field name="rating" type="double" />
+		<field name="price" type="long" />
+		<field name="discount" type="long" />
+		<field name="discountPercentage" type="int" />
+		<field name="finalPrice" type="long" />
+		<field name="gender" type="String" />
+		<field name="brandId" type="long" />
+		<field name="highlightsId" type="long" />
+		<field name="productCount" type="int" />
+		<field name="status" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.ProductCategory">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="categoryName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.ProductOrder">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="productId" type="long" />
+		<field name="size" type="String" />
+		<field name="quantity" type="int" />
+		<field name="cost" type="long" />
+		<field name="userId" type="long" />
+		<field name="addressId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.Wishlist">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.onlineshopping.product.service.model.WishlistProduct">
+		<field name="id" type="long" />
+		<field name="wishlistId" type="long" />
+		<field name="productId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

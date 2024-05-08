@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.onlineshopping.product.service.service.impl.BrandLocalServiceImpl" id="com.onlineshopping.product.service.service.BrandLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.BrandServiceImpl" id="com.onlineshopping.product.service.service.BrandService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.BrandPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.BrandPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.CartListLocalServiceImpl" id="com.onlineshopping.product.service.service.CartListLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.CartListServiceImpl" id="com.onlineshopping.product.service.service.CartListService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.CartListPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.CartListPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.CartListProductLocalServiceImpl" id="com.onlineshopping.product.service.service.CartListProductLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.CartListProductServiceImpl" id="com.onlineshopping.product.service.service.CartListProductService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.CartListProductPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.CartListProductPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.HighlightsLocalServiceImpl" id="com.onlineshopping.product.service.service.HighlightsLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.HighlightsServiceImpl" id="com.onlineshopping.product.service.service.HighlightsService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.HighlightsPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.HighlightsPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.ImageLocalServiceImpl" id="com.onlineshopping.product.service.service.ImageLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.ImageServiceImpl" id="com.onlineshopping.product.service.service.ImageService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.ImagePersistenceImpl" id="com.onlineshopping.product.service.service.persistence.ImagePersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.ProductLocalServiceImpl" id="com.onlineshopping.product.service.service.ProductLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.ProductServiceImpl" id="com.onlineshopping.product.service.service.ProductService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.ProductPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.ProductPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.ProductCategoryLocalServiceImpl" id="com.onlineshopping.product.service.service.ProductCategoryLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.ProductCategoryServiceImpl" id="com.onlineshopping.product.service.service.ProductCategoryService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.ProductCategoryPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.ProductCategoryPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.ProductOrderLocalServiceImpl" id="com.onlineshopping.product.service.service.ProductOrderLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.ProductOrderServiceImpl" id="com.onlineshopping.product.service.service.ProductOrderService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.ProductOrderPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.ProductOrderPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.WishlistLocalServiceImpl" id="com.onlineshopping.product.service.service.WishlistLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.WishlistServiceImpl" id="com.onlineshopping.product.service.service.WishlistService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.WishlistPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.WishlistPersistence" parent="basePersistence" />
+	<bean class="com.onlineshopping.product.service.service.impl.WishlistProductLocalServiceImpl" id="com.onlineshopping.product.service.service.WishlistProductLocalService" />
+	<bean class="com.onlineshopping.product.service.service.impl.WishlistProductServiceImpl" id="com.onlineshopping.product.service.service.WishlistProductService" />
+	<bean class="com.onlineshopping.product.service.service.persistence.impl.WishlistProductPersistenceImpl" id="com.onlineshopping.product.service.service.persistence.WishlistProductPersistence" parent="basePersistence" />
+</beans>

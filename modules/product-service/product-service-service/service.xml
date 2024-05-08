@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_1_0.dtd">
+
+<service-builder  package-path="com.onlineshopping.product.service">
+	<namespace>Product</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="ProductCategory" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="categoryName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="ProductCategory" name="CategoryName">
+			<finder-column name="categoryName"/>
+		</finder>
+
+	</entity>
+
+	<entity local-service="true" name="Highlights" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="features" type="String" />
+		<column name="size" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="Highlights" name="FeaturesAndSize">
+			<finder-column name="features"/>
+			<finder-column name="size"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Brand" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="brandName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="Brand" name="BrandName">
+			<finder-column name="brandName"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Product" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="productName" type="String" />
+		<column name="productInfo" type="String" />
+		<column name="color" type="String" />
+		<column name="ratingCount" type="long" />
+		<column name="rating" type="double" />
+		<column name="price" type="long" />
+		<column name="discount" type="long" />
+		<column name="discountPercentage" type="int" />
+		<column name="finalPrice" type="long" />
+		<column name="gender" type="String" />
+		<column name="brandId" type="long" />
+		<column name="highlightsId" type="long" />
+		<column name="productCount" type="int" />
+		<column name="status" type="int" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="Product" name="ProductDetails">
+			<finder-column name="productName" />
+			<finder-column name="color" />
+			<finder-column name="gender" />
+			<finder-column name="brandId" />
+			<finder-column name="highlightsId" />
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Image" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="view" type="String" />
+		<column name="imageUrl" type="String" />
+		<column name="productId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="productId" />
+		</order>
+
+		<finder return-type="Collection" name="ProductId">
+			<finder-column name="productId"/>
+		</finder>
+
+		<finder return-type="Image" name="ImageUrlProductId">
+			<finder-column name="imageUrl"/>
+			<finder-column name="productId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Wishlist" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="Wishlist" name="UserId">
+			<finder-column name="userId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="CartList" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="CartList" name="UserId">
+			<finder-column name="userId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="WishlistProduct" remote-service="true">
+		<column name="id" type="long" primary="true" />
+		<column name="wishlistId" type="long" />
+		<column name="productId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="wishlistId" />
+		</order>
+
+		<finder return-type="WishlistProduct" name="WishlistIdProductId">
+			<finder-column name="wishlistId"/>
+			<finder-column name="productId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="CartListProduct" remote-service="true">
+		<column name="id" type="long" primary="true" />
+		<column name="cartListId" type="long" />
+		<column name="productId" type="long" />
+		<column name="size" type="String" />
+		<column name="quantity" type="int" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="cartListId" />
+		</order>
+
+		<finder return-type="CartListProduct" name="CartListIdProductId">
+			<finder-column name="cartListId"/>
+			<finder-column name="productId"/>
+		</finder>
+
+		<finder return-type="CartListProduct" name="CartListIdProductIdSize">
+			<finder-column name="cartListId"/>
+			<finder-column name="productId"/>
+			<finder-column name="size"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="ProductOrder" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long" />
+		<column name="productId" type="long" />
+		<column name="size" type="String" />
+		<column name="quantity" type="int" />
+		<column name="cost" type="long" />
+		<column name="userId" type="long" />
+		<column name="addressId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+	</entity>
+	
+</service-builder>

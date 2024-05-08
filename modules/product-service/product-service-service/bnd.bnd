@@ -1,0 +1,19 @@
+Bundle-Name: product-service-service
+Bundle-SymbolicName: com.onlineshopping.product.service.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+
+Export-Package: \
+    com.onlineshopping.product.service.model.impl,\
+    com.onlineshopping.product.service.service.impl,\
+    com.onlineshopping.product.service.service.helper,\
+    com.onlineshopping.product.service.service.constats,\
+    com.onlineshopping.product.service.service.persistence,\
+    com.onlineshopping.product.service.service.validation
+
+
+-includeresource: \
+@jackson-databind-2.9.6.jar,\
+@jackson-annotations-2.9.6.jar,\
+@jackson-core-2.9.6.jar

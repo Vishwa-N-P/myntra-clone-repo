@@ -1,0 +1,11 @@
+Bundle-Name: product-service-api
+Bundle-SymbolicName: com.onlineshopping.product.service.api
+Bundle-Version: 1.0.0
+
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../product-service-service/service.xml
+Export-Package:\
+    com.onlineshopping.product.service.exception,\
+    com.onlineshopping.product.service.model,\
+    com.onlineshopping.product.service.service.persistence,\
+    com.onlineshopping.product.service.service

@@ -1,0 +1,34 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.onlineshopping.product.service.service.impl;
+
+import com.onlineshopping.product.service.model.ProductOrder;
+import com.onlineshopping.product.service.service.base.ProductOrderServiceBaseImpl;
+
+import java.util.List;
+
+/**
+ * @author Brian Wing Shun Chan
+ */
+public class ProductOrderServiceImpl extends ProductOrderServiceBaseImpl {
+
+    public ProductOrder addProductOrder(long productId, String size, int quantity, long cost, long userId, long addressId) {
+        return productOrderLocalService.addProductOrder(productId, size, quantity, cost, userId, addressId);
+    }
+
+    public List<ProductOrder> getProductOrderList(long userId) {
+        return productOrderLocalService.getProductOrderList(userId);
+    }
+}
